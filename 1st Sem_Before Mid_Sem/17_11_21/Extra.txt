@@ -1,0 +1,184 @@
+// Ascii of every Character
+#include <stdio.h>
+
+int main()
+{
+    int i ;
+    
+    for(i = 0;i<=255;i++){
+        printf("%d\t\t %c\n",i,i);
+    }
+    return 0;
+}
+
+
+
+//Ascii of only ALphabets
+#include <stdio.h>
+
+int main()
+{
+    int i ;
+    
+    for(i = 65;i<=90;i++){
+        printf("%d\t\t %c\n",i,i);
+    }
+    for(i = 97;i<=122;i++){
+        printf("%d\t\t %c\n",i,i);
+    }
+    return 0;
+}
+
+
+
+
+//Table of ur desired Number
+#include <stdio.h>
+
+int main()
+{
+    int i,num;
+    int mul;
+    
+    printf("Enter the Number whoes table u want : ");
+    scanf("%d",&num);
+    
+    for(i=1;i<=10;i++){
+        mul = i*num;
+        printf("%d * %d = %d    ",num,i,mul);
+        
+    }
+    
+    return 0;
+}
+
+
+
+
+//Table of ur desired Number
+#include <stdio.h>
+
+int main()
+{
+    int i,num;
+    int mul;
+    
+    printf("Enter the Number whoes table u want : ");
+    scanf("%d",&num);
+    
+    for(i=1;i<=10;i++){
+        mul = i*num;
+        printf("%d * %d = %d \n",num,i,mul);
+        
+    }
+    
+    return 0;
+}
+
+
+
+
+
+//FActorial
+#include <stdio.h>
+
+int main()
+{
+    int i,n,input,fac;
+    fac = 1;
+    
+    printf("Enter the Integer : ");
+    scanf("%d",&input);
+    
+    
+    for(i=1;input>=i;input--){
+        
+        fac = fac * input;
+    }
+    
+    printf("The Factorial : %d",fac);
+    return 0;
+}
+
+
+
+
+
+//Odd number between two given Inputs
+#include <stdio.h>
+int main(){
+    int a,b;
+    
+    
+    printf("Enter the First Number : ");
+    scanf("%d",&a);
+    printf("Enter the 2nd Number : ");
+    scanf("%d",&b);
+    
+    if(a<b){
+        if(a%2!=0)
+            a+=2;
+        else
+            a++;
+        if(b%2!=0)
+            b--;
+        
+        for(a;a<=b;a+=2){
+            printf("%d\n",a);
+        }
+    }
+    else if(a>b){
+        if(a%2!=0)
+            a-=2;
+        else
+            a--;
+        if(b%2!=0)
+            b++;
+            
+        for(a;a>=b;a-=2){
+            printf("%d\n",a);
+        }
+    }
+    
+}
+
+
+
+
+//Even number between two given Inputs
+#include <stdio.h>
+int main(){
+    int a,b;
+    
+    
+    printf("Enter the First Number : ");
+    scanf("%d",&a);
+    printf("Enter the 2nd Number : ");
+    scanf("%d",&b);
+    
+    if(a<b){
+        if(a%2==0)
+            a+=2;
+        else
+            a++;
+        if(b%2==0)
+            b--;
+        
+        for(a;a<=b;a+=2){
+            printf("%d\n",a);
+        }
+    }
+    else if(a>b){
+        if(a%2==0)
+            a-=2;
+        else
+            a--;
+        if(b%2==0)
+            b++;
+            
+        for(a;a>=b;a-=2){
+            printf("%d\n",a);
+        }
+    }
+    
+}

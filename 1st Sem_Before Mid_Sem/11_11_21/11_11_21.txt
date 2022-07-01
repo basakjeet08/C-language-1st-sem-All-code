@@ -1,0 +1,306 @@
+#include <stdio.h>
+int main(){
+
+  int principal , time;
+  float rate = 0.0 ;
+  float interest;
+  printf("Enter the Principal Amount : ");
+  scanf("%d",&principal);
+  printf("Enter the Time : ");
+  scanf("%d",&time);
+
+  switch(time){
+
+    case 1 :
+      rate = 8.0;
+      break ;
+
+    case 2 :
+      rate = 9.0;
+      break;
+
+    case 3 :
+      rate = 10.0;
+      break;
+    default :
+        printf("The Enter Values are wrong !!");
+  }
+
+  interest =(float)(principal*rate*time)/100.0;
+  printf("The Interest is %f",interest);
+
+  return 0;
+
+}
+
+
+#include <stdio.h>
+int main(){
+
+  int marks,internal,endsem,div;
+  printf("Enter the Internal Marks : ");
+  scanf("%d",&internal);
+  printf("Enter the End Semester Marks : ");
+  scanf("%d",&endsem);
+
+  marks = internal + endsem;
+  div = marks/10 ;
+
+  switch(div){
+
+    case 10 :
+    case 9 :
+      printf("The Grade is 0");
+      break;
+
+    case 8 :
+      printf("The Grade is E");
+      break;
+
+    case 7 :
+      printf("The Grade is A");
+      break;
+
+    case 6 :
+      printf("The Grade is B");
+      break;
+
+    case 5 :
+      printf("The Grade is C");
+      break;
+
+    case 4 :
+      printf("The Grade is D");
+      break;
+
+    case 3 :
+    case 2 :
+    case 1 :
+      printf("The Grade is F");
+      break;
+    default :
+      printf("Wrong Value Entered !!");
+  }
+  return 0;
+
+}
+
+
+
+
+#include <stdio.h>
+int main(){
+
+  int a;
+  double b;
+  char c ;
+  float d;
+
+  printf("The Size of int : %ld \n",sizeof(a));
+  printf("The Size of double : %ld \n",sizeof(b));
+  printf("The Size of char : %ld \n",sizeof(c));
+  printf("The Size of Float : %ld \n",sizeof(d));
+
+  return 0;
+
+}
+
+
+
+#include <stdio.h>
+int main(){
+
+  char c;
+
+  printf("Enter The Character : ");
+  scanf("%c", &c);
+
+  if((c>='a')&&(c<='z')||(c>='A')&&(c<='Z')){
+
+    switch(c){
+
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+      case 'A':
+      case 'E':
+      case 'I':
+      case 'O':
+      case 'U':
+        printf("It is a Vowel !!");
+        break;
+      default:
+        printf("It is a Consonant !!");
+    }
+  }
+  else
+    printf("It is not a Valid Character !!");
+
+  return 0;
+
+}
+
+
+
+
+
+#include <stdio.h>
+int main(){
+
+  char c ;
+  int x ;
+
+  printf("Enter the Alphabet : ");
+  scanf("%c",&c);
+
+  if((c>='a')&&(c<='z')){
+    x = (int)c - 32;
+    printf("The Character is : %c",x);
+
+  }
+  else if((c>='A')&&(c<='Z')){
+    x = (int)c + 32;
+    printf("The Character is : %c",x);
+  }
+  else
+    printf("The Character is Invalid !!");
+
+  return 0;
+
+}
+
+
+#include <stdio.h>
+int main(){
+
+  int x ;
+  printf("Enter the Number : ");
+  scanf("%d",&x);
+  
+  switch(x){
+      
+      default : 
+        printf("Wrong Input !!");
+        break;
+      case 0 :
+        printf("Zero");
+        break;
+      case 1 :
+        printf("One");
+        break;
+      case 2 :
+        printf("Two");
+        break;
+      case 3 :
+        printf("Three");
+        break;
+      case 4 :
+        printf("four");
+        break;
+      case 5 :
+        printf("Five");
+        break;
+      case 6 :
+        printf("Six");
+        break;
+      case 7 :
+        printf("Seven");
+        break;
+      case 8 :
+        printf("Eight");
+        break;
+      case 9 :
+        printf("Nine");
+        
+      
+  }
+
+  return 0;
+
+}
+
+
+
+
+#include <stdio.h>
+int main(){
+
+  int x ;
+  printf("Enter the Number : ");
+  scanf("%d",&x);
+  
+  int a = x>0;
+  switch(a){
+  
+    case 0 :
+      printf("-ve Number !!");
+      break;
+    case 1 :
+      printf("+ve Number !!");
+      break;
+    default : 
+      printf("Wrong Input !!");
+    
+  }
+
+  return 0;
+
+}
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+  int x ;
+  printf("Enter the Number : ");
+  scanf("%d",&x);
+  
+  switch(x%2){
+      case 1 :
+        printf("Odd !!");
+        break;
+      case 0 :
+        printf("Even !!");
+        break;
+      default :
+        printf("Wrong Input !!");
+  }
+
+
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+  int a,b,x;
+  printf("Enter the Number : ");
+  scanf("%d",&a);
+  printf("Enter the Number : ");
+  scanf("%d",&b);
+  
+  x = a>b;
+  
+  switch(x){
+      case 1 :
+        printf("%d is Greater ",a);
+        break;
+      case 0 :
+        printf("%d is Greater ",b);
+        break;
+      default :
+        printf("Wrong Input !!");
+  }
+
+
+    return 0;
+}

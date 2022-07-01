@@ -1,0 +1,149 @@
+							Assignment 16
+
+//WAP to calculate the Interest
+#include <stdio.h>
+void Calculation();
+int p,t;
+float r;
+int main()
+{
+    printf("Enter the Principal Amount : ");
+    scanf("%d",&p);
+    printf("Enter the Time : ");
+    scanf("%d",&t);
+    printf("Enter the Rate of Interest : ");
+    scanf("%f",&r);
+    Calculation();
+
+    return 0;
+}
+void Calculation(){
+    float interest ;
+    
+    interest = (p*r*t)/100.0;
+    
+    printf("The Simple Interest is %f",interest);
+
+}
+
+
+
+
+
+
+//Q2. Power Function
+#include <stdio.h>
+
+int power(int,int);
+int main(){
+    int x,y,pow;
+
+    printf("Enter the Number : ");
+    scanf("%d",&x);
+    printf("Enter the Power : ");
+    scanf("%d",&y);
+
+    pow = power(x,y);
+    printf("The Result is : %d",pow);
+
+    return 0;
+
+}
+int power(int x, int y){
+    int i,pow;
+    pow = 1;
+    for(i=1;i<=y;i++){
+        pow = pow*x;
+
+    }
+
+    return pow;
+}
+
+
+
+
+
+//Q3. Factorial Function
+#include <stdio.h>
+
+int fact(int);
+int main(){
+    int a,f;
+
+    printf("Enter the Number : ");
+    scanf("%d",&a);
+
+    f = fact(a);
+    printf("The Result is : %d",f);
+
+    return 0;
+
+}
+int fact(int a){
+    int i,f;
+    f = 1;
+    for(i=1;i<=a;i++){
+        f = f*i;
+
+    }
+
+    return f;
+}
+
+
+
+
+//Q4. Even or Odd
+#include <stdio.h>
+
+void check_even_odd(int);
+int main(){
+    int n;
+
+    printf("Enter the Number : ");
+    scanf("%d",&n);
+
+    check_even_odd(n);
+
+    return 0;
+
+}
+void check_even_odd(int n){
+    if(n%2==0)
+        printf("The Number is Even !!\n");
+    else
+        printf("The Number is Odd !!\n");
+}
+
+
+
+
+
+//Q5. WAP to calculate the area preimeter of a Cicle
+#include <stdio.h>
+
+void find_area();
+void find_perimeter();
+float r;
+int main(){
+    printf("Enter the Radius : ");
+    scanf("%f",&r);
+
+    find_area();
+    find_perimeter();
+
+    return 0;
+}
+
+void find_area(){
+    float area;
+    area = 3.14*r*r;
+    printf("Area : %f\n",area);
+}
+
+void find_perimeter(){
+    float perimeter ;
+    perimeter = 2.0*3.14*r;
+    printf("Perimeter : %f",perimeter);
+}

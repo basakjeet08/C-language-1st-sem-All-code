@@ -1,0 +1,132 @@
+							Assignment 17
+
+//Q1
+#include <stdio.h>
+#include <math.h>
+
+float Find_Area(float,float,float);
+float Find_Perimeter(float,float,float);
+
+int main()
+{
+    float a,b,c,area;
+    
+    printf("Enter the Sides of a Traingle :--------------\n");
+    printf("A : ");
+    scanf("%f",&a);
+    printf("B : ");
+    scanf("%f",&b);
+    printf("C : ");
+    scanf("%f",&c);
+    
+    area = Find_Area(a,b,c);
+    
+    printf("The Area is : %.2f",area);
+
+    return 0;
+}
+
+float Find_Area(float a,float b,float c){
+    float s = Find_Perimeter(a,b,c);
+    s = s/2;
+    
+    float area = sqrt((s*(s-a)*(s-b)*(s-c)));
+    
+    return area;
+}
+
+float Find_Perimeter(float a,float b,float c){
+    float perimeter = a + b + c;
+    
+    return perimeter;
+}
+
+
+
+
+
+
+//Q2
+#include <stdio.h>
+int find_factorial(int);
+int permutation(int,int);
+int main()
+{
+    int r,n,output;
+    printf("Enter the Value of permutation :---------------\n");
+    printf("n : ");
+    scanf("%d",&n);
+    printf("r : ");
+    scanf("%d",&r);
+
+    output = permutation(n,r);
+    
+    if(r>n){
+        output = output * (-1);
+    }
+    printf("Output : %d",output);
+
+    return 0;
+}
+
+int permutation(int n,int r){
+    int output = find_factorial(n)/find_factorial(n-r);
+    
+    return output;
+}
+
+int find_factorial(int n){
+    int i,output;
+    output = 1;
+    if(n<0)
+        n = n*(-1);
+        
+    for(i=1;i<=n;i++){
+        output = output * i;
+    }
+    return output;
+}
+
+
+
+
+
+//Q3
+#include <stdio.h>
+#include <math.h>
+void Triangle(int, int, int);
+float Cal_Area(int,int,int);
+int main()
+{
+    int a,b,c;
+    printf("Enter the Sides of the triangle : ------------------\n");
+    printf("A : ");
+    scanf("%d",&a);
+    printf("B : ");
+    scanf("%d",&b);
+    printf("C : ");
+    scanf("%d",&c);
+    
+    Triangle(a,b,c);
+
+    return 0;
+}
+
+void Triangle(int a,int b, int c){
+    
+    float area ;
+    if((a+b>c)&&(a+c>b)&&(b+c>a)){
+        area = Cal_Area(a,b,c);
+        printf("The Area : %.2f",area);
+    }
+    else
+        printf("The Entered Sides are Not Valid to make a Triangle !!");
+        
+}
+
+float Cal_Area(int a, int b, int c){
+    float s = (a+b+c)/2.0;
+    float area = sqrt(s*(s-a)*(s-b)*(s-c));
+    
+    return area;
+}

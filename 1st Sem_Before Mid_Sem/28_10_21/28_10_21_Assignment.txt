@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main(){
+
+	printf("Name : Anirban Basak ");
+	printf("Roll No. : 21051880 ");
+	printf("Section : B18-A ");
+	return 0;
+}
+
+#include <stdio.h>
+int main(){
+
+	printf("Name : Anirban Basak\n");
+	printf("Roll No. : 21051880\n");
+	printf("Section : B18-A ");
+	return 0 ;
+}
+
+#include <stdio.h>
+int main(){
+
+	int a = 5;
+	int b = 10;
+	int sum ; int diff ;
+	
+	sum = a+b;
+	diff = b-a ;
+	printf("Sum of %d and %d is %d\n",a,b,sum);
+	printf("Difference of %d and %d is %d ",b,a,diff);
+	return 0 ;
+}
+
+#include <stdio.h>
+int main(){
+
+	int length = 10 ;
+	int breadth = 5 ;
+	int area ;
+	
+	area = length*breadth ;
+	printf("Area of a rectangle with sides %d and %d is %d",length,breadth,area);
+	return 0 ;
+}
+
+#include <stdio.h>
+int main(){
+
+	float pi = 3.14;
+	float area ;
+	float perimeter ; 
+	float r = 5.0 ;
+
+	area = pi*r*r;
+	perimeter = 2.0*pi*r ;
+
+	printf("The area of the circle with radius %f is %f and perimeter is %f ",r,area,perimeter);
+	return 0;
+}

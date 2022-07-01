@@ -1,0 +1,129 @@
+
+				    			//Assignment 09
+
+//Q1
+#include <stdio.h>
+int main(){
+
+	int i,n;
+	i = 0 ;
+	printf("Enter the Range : ");
+	scanf("%d",&n);
+	while(i<=n){
+
+	    printf("%d\n",i);
+	    i++;
+	}
+	return 0;
+}
+
+
+
+
+
+//Q2
+#include <stdio.h>
+int main(){
+
+	int i,n,x;
+	i = 1 ;
+	int cal = 1;
+
+	printf("Enter the Number : ");
+	scanf("%d",&x);
+	printf("Enter the Power : ");
+	scanf("%d",&n);
+
+	while(i<=n){
+
+		cal = cal * x;
+		i++;
+	}
+	printf("The Value is : %d",cal);
+	return 0;
+}
+
+
+
+
+
+//Q3
+#include <stdio.h>
+int main(){
+
+	int i,n;
+	float sum , cal ;
+	sum = 0.0;
+	i = 1;
+	cal = 1.0;
+
+	printf("Enter the Number : ");
+	scanf("%d",&n);
+
+	while(i<=n){
+		cal = (float)1.0/i;
+		sum = sum + cal;
+		i++;
+	}
+	printf("The sum is : %f",sum);
+
+	return 0;
+}
+
+
+
+
+
+
+
+//Q4
+#include <stdio.h>
+
+int main()
+{
+    int i,n,input;
+    i = 0;
+    
+    printf("Enter the Integer : ");
+    scanf("%d",&input);
+    
+    
+    while(input>0){
+        input = input/10;
+        i++;
+        
+    }
+    
+    printf("The Number of Digits : %d",i);
+    return 0;
+}
+
+
+
+
+
+
+//Q5
+#include <stdio.h>
+
+int main()
+{
+    int i,n,input,cal,sum;
+    i = 0;
+    sum = 0;
+    
+    printf("Enter the Integer : ");
+    scanf("%d",&input);
+    
+    
+    while(input>0){
+        cal = input%10;
+        input = input/10;
+        sum = sum + cal ;
+        i++;
+        
+    }
+    
+    printf("The Sum of Digits : %d",sum);
+    return 0;
+}

@@ -1,0 +1,197 @@
+#include <stdio.h>
+
+int main()
+{
+    int input ;
+    int square , cube ;
+    printf("Enter a Integer :  ");
+    scanf("%d",&input);
+    
+    square = input*input ;
+    cube = input*input*input ;
+    
+    printf("\n Square : %d",square);
+    printf("\n Cube : %d",cube);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    float input ; 
+    float celsius ;
+    
+    printf("Enter the Temperature in Fahrenheit : ");
+    scanf("%f",&input);
+    
+    celsius = (input - 32.0)/1.8 ;
+    
+    printf("Celsius : %f",celsius);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a , b , c ;
+    
+    printf("Enter a : ");
+    scanf("%d",&a);
+    printf("Enter b : ");
+    scanf("%d",&b);
+    printf("Enter c : ");
+    scanf("%d",&c);
+    
+    printf("%dx+%dy=%d",a,b,c);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    printf("*\n");
+    printf("* * \n");
+    printf("* * *");
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    printf("*\n* *\n* * *");
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    int input , kms , m ;
+    
+    printf("Enter the Quantity : ");
+    scanf("%d",&input);
+    
+    kms = input/1000 ;
+    m = input%1000;
+    
+    printf("%d meter = %d km and %d meter",input,kms,m);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    int input , sec , hour , min ;
+    int cal ;
+    
+    printf("Enter the Equivalent hour : ");
+    scanf("%d",&input);
+    
+    hour = input / 3600 ;
+    cal = input % 3600 ;
+    min = cal / 60 ;
+    sec = cal % 60 ;
+    
+    
+    
+    
+    printf("%d Seconds = %d hours,%d Minute and %d seconds", input,hour,min,sec);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    int hour_1 , hour_2 , min_1 , min_2, sec_1 ,sec_2 ;
+    int cal , t_sec ,h_3 , m_3 , s_3 ;
+    
+    printf("Enter the Hour : ");
+    scanf("%d",&hour_1);
+    printf("Enter the min : ");
+    scanf("%d",&min_1);
+    printf("Enter the sec : ");
+    scanf("%d",&sec_1);
+    
+    printf("Enter the Hour : ");
+    scanf("%d",&hour_2);
+    printf("Enter the min : ");
+    scanf("%d",&min_2);
+    printf("Enter the sec : ");
+    scanf("%d",&sec_2);
+    
+    t_sec = hour_2*3600 + hour_1*3600 + min_2*60 + min_1*60 + sec_2 + sec_1 ;
+    
+    h_3 = t_sec / 3600 ;
+    cal = t_sec % 3600 ;
+    m_3 = cal / 60 ;
+    s_3 = cal % 60 ;
+    
+    printf("%d:%d:%d",h_3,m_3,s_3);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    
+    printf("Enter the first Integer : ");
+    scanf("%d",&a);
+    printf("Enter the Second Integer : ");
+    scanf("%d",&b);
+    
+    int add = a+ b ;
+    int diff = a - b ;
+    int mul = a*b ;
+    int divi = a / b;
+    int mod = a% b ;
+    
+    printf("Sum : %d\t Difference : %d\t Multiplication : %d \t Divide : %d \t Modulus : %d \t",add,diff,mul,divi,mod);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    float a,b;
+    
+    printf("Enter the first Integer : ");
+    scanf("%f",&a);
+    printf("Enter the Second Integer : ");
+    scanf("%f",&b);
+    
+    float add = a+ b ;
+    float diff = a - b ;
+    float mul = a*b ;
+    float divi = a / b;
+    
+    printf("Sum : %f\t Difference : %f\t Divide : %f \t Multiplication : : %f \t",add,diff,divi,mul);
+
+
+    return 0;
+}

@@ -1,0 +1,200 @@
+//Q1
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int* ptr_1880;
+    int n_1880, i;
+
+    printf("Enter number of elements of array:");
+    scanf("%d", &n_1880);
+    ptr_1880 = (int*) malloc(n_1880 * sizeof(int));
+
+    if (ptr_1880 == NULL) {
+        printf("Memory not allocated.\n");
+        exit(0);
+    }
+
+    else {
+        printf("Memory successfully allocated.\n");
+        printf("Enter %d elements of array:\n", n_1880);
+
+        for (i=0; i<n_1880; ++i) 
+            scanf("%d", &ptr_1880[i]);
+
+        printf("\nThe elements of the array are:\n");
+        for (i=0; i<n_1880; ++i) 
+            printf("%d\t", ptr_1880[i]);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+//Q2
+#include <stdio.h>
+int main()
+{
+    int square(int);
+    int cube(int);
+    int (*p_1880)(int);
+    int square_1880, cube_1880;
+    int sq_side_1880, cu_side_1880;
+
+    printf("\nEnter side of square: ");
+    scanf("%d", &sq_side_1880);
+    printf("Enter side of cube: ");
+    scanf("%d", &cu_side_1880);
+
+    p_1880 = square;
+    printf("\nArea of square: %d\n", (*p_1880)(sq_side_1880));
+    p_1880 = cube;
+    printf("Area of cube: %d", (*p_1880)(cu_side_1880));
+
+    return 0;
+}
+
+int square(int n) {return n*n;}
+int cube(int n) {return n*n*n;}
+
+
+
+
+
+
+//Q3
+#include <stdio.h>
+struct employee{
+    int id;
+    int age;
+    float salary;
+};
+
+int main()
+{
+    struct employee E1_1880;
+
+    printf("\nEnter member id: ");
+    scanf("%d", &E1_1880.id);
+    printf("Enter member age: ");
+    scanf("%d", &E1_1880.age);
+    printf("Enter member salary: ");
+    scanf("%f", &E1_1880.salary);
+
+    printf("\nMember id: %d\n", E1_1880.id);
+    printf("Member age: %d\n", E1_1880.age);
+    printf("Member salary: %f", E1_1880.salary);
+
+    return 0;
+}
+
+
+
+
+
+
+
+//Q4
+#include <stdio.h>
+#include <string.h>
+struct student
+{
+    int name;
+    int rollno;
+    int s1; 
+    int s2;
+    int s3;
+};
+int main()
+{
+    struct student ST_1880;
+    int avg_1880;
+
+    printf("Enter name of student: ");
+    scanf("%s", &ST_1880.name);
+    printf("Enter the roll no of student: ");
+    scanf("%d", &ST_1880.rollno);
+    printf("\nEnter marks obtained in 1st subject: ");
+    scanf("%d", &ST_1880.s1);
+    printf("\nEnter marks obtained in 2nd subject: ");
+    scanf("%d", &ST_1880.s2);
+    printf("\nEnter marks obtained in 3rd subject: ");
+    scanf("%d", &ST_1880.s3);
+
+    avg_1880 = (ST_1880.s1 + ST_1880.s2 + ST_1880.s3) / 3;
+    printf("Average marks of the student: %d", avg_1880);
+
+    return 0;
+}
+
+
+
+
+
+
+//Q5
+#include<stdio.h>
+struct complex
+{
+    int real;
+    int imaginary;
+};
+
+int main()
+{
+    struct complex comp_num1_1880, comp_num2_1880, sum_1880;
+    printf("Enter real and imaginary part of first complex number:\n");
+    scanf("%d%d", &comp_num1_1880.real, &comp_num1_1880.imaginary);
+    printf("Enter real and imaginary part of second complex number:\n");
+    scanf("%d%d", &comp_num2_1880.real, &comp_num2_1880.imaginary);
+
+    sum_1880.real = comp_num1_1880.real + comp_num2_1880.real;
+    sum_1880.imaginary = comp_num1_1880.imaginary + comp_num2_1880.imaginary;
+
+    printf("SUM = %d+i%d", sum_1880.real, sum_1880.imaginary);
+
+    return 0;
+}
+
+
+
+
+
+
+//Q6
+#include <stdio.h>
+
+struct student
+{
+  char name_1880[30];
+  int roll_1880;
+  float marks_1880;
+};
+
+int main()
+{
+  struct student s_1880[3];
+  int i;
+  for(i=0;i< 3;i++)
+  {
+    printf("\nEnter name of the student: ");
+    scanf("%s",s_1880[i].name_1880);
+    printf("Enter the roll no: ");
+    scanf("%d",&s_1880[i].roll_1880);
+    printf("Enter the marks obtained by the student: ");
+    scanf("%f",&s_1880[i].marks_1880);
+  }
+  printf("Details of the student are:\n");
+  for(i=0;i<3;i++)
+  {
+    printf("Name: %s\n",s_1880[i].name_1880);
+    printf("Roll: %d\n", s_1880[i].roll_1880);
+    printf("Marks: %0.2f\n\n", s_1880[i].marks_1880);
+  }
+  return 0;
+}

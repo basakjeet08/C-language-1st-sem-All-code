@@ -1,0 +1,186 @@
+//Q1
+#include <stdio.h>
+int main()
+{
+    int i, j, rows_1880, cols_1880, array_1880[100][100];
+
+    printf("\nEnter number of rows of array: ");
+    scanf("%d", &rows_1880);
+    printf("Enter number of columns of array: ");
+    scanf("%d", &cols_1880);
+
+    printf("Enter array: \n");
+    for (i=0; i<rows_1880; ++i)
+    {
+        printf("For Row %d: (%d elements)\n", i+1, cols_1880);
+        for (j=0; j<cols_1880; j++)
+            scanf("%d", *(array_1880+i)+j);
+    }
+
+    printf("\nArray: \n");
+    for (i=0; i<rows_1880; i++)
+    {
+        for (j=0; j<cols_1880; ++j)
+            printf("%d\t", *(*(array_1880+i)+j));
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+
+//Q2
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int length_1880;
+    int user_strlen(char *);
+
+    printf("Enter the string: ");
+    gets(str);
+
+    length_1880 = user_strlen(str);
+    printf("Length of given string is: %d", length_1880);
+
+    return 0;
+}
+
+int user_strlen(char *str)
+{
+    int count = 0;
+    while (*str != '\0')
+    {
+        count++;
+        str++;
+    }
+    return count;
+}
+
+
+
+
+
+
+
+//Q3
+#include <stdio.h>
+int main()
+{
+    char str_1880[100];
+    char copy_str_1880[100];
+    char *user_strcopy(char*, char*);
+
+    printf("Enter a string: ");
+    gets(str_1880);
+
+    printf("Copied string: ");
+    user_strcopy(copy_str_1880, str_1880);
+    puts(copy_str_1880);
+
+    return 0;
+}
+
+char *user_strcopy(char *x, char *y)
+{
+    while (*y != '\0')
+    {
+        *x = *y;
+        y++;
+        x++;
+    } 
+    *x = '\0';
+    return x;
+}
+
+
+
+
+
+
+//Q4
+#include <stdio.h>
+int main()
+{
+    char str1_1880[400];
+    char str2_1880[100];
+    char *user_strcat(char*, char*);
+
+    printf("\nEnter first string: ");
+    gets(str1_1880);
+    printf("Enter second string: ");
+    gets(str2_1880);
+
+    printf("\nConcatenated String: ");
+    user_strcat(str1_1880, str2_1880);
+    puts(str1_1880);
+    printf("\n");
+
+    return 0;
+}
+
+char *user_strcat(char *s1, char *s2)
+{
+    while (*s1 != '\0')
+    {
+        s1++;
+    } 
+    while (*s2 != '\0')
+    {
+        *s1++ = *s2++;
+    }
+    *s1 = '\0';
+    return s1;
+}
+
+
+
+
+//Q5
+#include <stdio.h>
+int main()
+{
+    char leftStr_1880[400];
+    char rightStr_1880[100];
+    int user_strcmp(char*, char*);
+    int res_1880;
+
+    printf("\nEnter first string (leftStr): ");
+    gets(leftStr_1880);
+    printf("Enter second string (rightStr): ");
+    gets(rightStr_1880);
+
+    res_1880 = user_strcmp(leftStr_1880, rightStr_1880);
+    if (res_1880 == 0)
+        printf("Strings are equal");
+    else
+    {
+        if (res_1880 > 0)
+            printf("leftStr has greater ASCII value than rightStr");
+        else
+            printf("rightStr has greater ASCII value than leftStr");
+    }
+    printf("\n");
+
+    return 0;
+}
+
+int user_strcmp(char *left, char *right)
+{
+    while(((*left != '\0') && (*right != '\0')) && (*left == *right))
+    {
+        left++;
+        right++;
+    }
+
+    if(*left == *right)
+        return 0;
+
+    else
+        return (*left - *right);
+}

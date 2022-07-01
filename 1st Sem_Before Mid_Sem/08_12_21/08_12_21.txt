@@ -1,0 +1,98 @@
+							Assignment 15
+
+//Q1
+#include <stdio.h>
+void mul(int,int);
+int main(){
+    int a,b;
+
+    printf("Enter the Numbers :---------------\n");
+    scanf("%d%d",&a,&b);
+
+    mul(a,b);
+
+    return 0;
+}
+
+void mul(int a, int b){
+    int x = a*b;
+    printf("Multiplication = %d",x);
+}
+
+
+
+
+
+
+//Q2
+#include <stdio.h>
+int mul(int,int);
+int main(){
+    int a,b,x;
+
+    printf("Enter the Numbers :---------------\n");
+    scanf("%d%d",&a,&b);
+
+    x = mul(a,b);
+    printf("Multiplication = %d",x);
+
+    return 0;
+}
+
+int mul(int a, int b){
+    int x = a*b;
+    return x;
+}
+
+
+
+
+
+
+
+//Q3
+#include <stdio.h>
+
+void mul(void);
+int a,b;
+int main(){
+    
+    printf("Enter the Numbers :-------------\n");
+    scanf("%d%d",&a,&b);
+
+    mul();
+
+    return 0 ;
+}
+
+void mul(void){
+    int x = a*b;
+    printf("Multiplication = %d",x);
+}
+
+
+
+
+
+
+//Q4
+#include <stdio.h>
+
+int mul(void);
+int a,b;
+int main(){
+    
+    int x;
+    printf("Enter the Numbers :-------------\n");
+    scanf("%d%d",&a,&b);
+
+    x = mul();
+    printf("Multiplication = %d",x);
+
+    return 0 ;
+}
+
+int mul(void){
+    int x = a*b;
+    return x;
+}

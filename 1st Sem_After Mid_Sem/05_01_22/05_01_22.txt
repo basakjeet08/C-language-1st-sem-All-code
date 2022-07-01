@@ -1,0 +1,166 @@
+//Q1
+#include <stdio.h>
+int Factorial(int);
+int main(){
+    int y_1880,fact_1880;
+
+    printf("Enter the Number : ");
+    scanf("%d",&y_1880);
+    fact_1880 = Factorial(y_1880);
+
+    printf("The Factorial is : %d",fact_1880);
+    return 0;
+}
+int Factorial(int y){
+    int fact;
+
+    if(y==1)
+        return 1;
+    else
+        fact = y*Factorial(y-1);
+
+    return fact ;
+}
+
+
+
+
+
+
+
+
+//Q2
+#include <stdio.h>
+void Display(int[]);
+void DisplayKey(int );
+int main(){
+    int y_1880[10],i,key_1880;
+    
+    printf("Enter the 10 Numbers : \n");
+    for(i=0;i<10;i++){
+        scanf("%d",&y_1880[i]);
+    }
+    printf("Enter the Position of a Number U wanna Display : ");
+    scanf("%d",&key_1880);
+    Display(y_1880);
+
+    if(key_1880>=0 && key_1880<=9)
+        DisplayKey(y_1880[key_1880]);
+    else
+        printf("The Index is Out of Bounds !!");
+    return 0;
+}
+
+void Display(int y[]){
+    int i ;
+    printf("The Array is :----------------- \n");
+    for(i=0;i<10;i++){
+        printf("[%d] : %d \n",i,y[i]);
+    }
+}
+void DisplayKey(int x){
+    printf("The Element at the Desired Position is : %d",x);
+
+}
+
+
+
+
+
+
+//Q3
+#include <stdio.h>
+void Calc(int[]);
+int main(){
+    int y_1880[10],i;
+    
+    printf("Enter the 10 Numbers : \n");
+    for(i=0;i<10;i++){
+        scanf("%d",&y_1880[i]);
+    }
+    Calc(y_1880);
+
+    return 0;
+}
+
+void Calc(int y[]){
+    int i ,sum;
+    sum = 0;
+    for(i=0;i<10;i++){
+        sum = sum + y[i];
+    }
+
+    printf("The Sum of the Array is : %d",sum);
+}
+
+
+
+
+
+
+
+//Q4
+#include <stdio.h>
+int MaxElement(int[]);
+int main(){
+    int y_1880[10],i,max_1880;
+    
+    printf("Enter the 10 Numbers : \n");
+    for(i=0;i<10;i++){
+        scanf("%d",&y_1880[i]);
+    }
+    max_1880 = MaxElement(y_1880);
+
+    printf("The Maximum Element is : %d",max_1880);
+
+    return 0;
+}
+
+int MaxElement(int y[]){
+    int i ,max;
+    max = y[0];
+    for(i=1;i<10;i++){
+        if(max<y[i])
+            max = y[i];
+    }
+
+    return max;
+}
+
+
+
+
+
+
+//Q5
+#include <stdio.h>
+int SearchElement(int[],int);
+int main(){
+    int y_1880[10],i,index_1880,key_1880;
+    
+    printf("Enter the 10 Numbers : \n");
+    for(i=0;i<10;i++){
+        scanf("%d",&y_1880[i]);
+    }
+
+    printf("Enter the Element to be Searched : ");
+    scanf("%d",&key_1880);
+    index_1880 = SearchElement(y_1880,key_1880);
+    printf("The Element is at Index : %d",index_1880);
+
+    return 0;
+}
+
+int SearchElement(int y[],int key){
+    int i ,index;
+    for(i=1;i<10;i++){
+        if(key==y[i])
+            index = i;
+    }
+
+    return index;
+}
+
+
+
+
